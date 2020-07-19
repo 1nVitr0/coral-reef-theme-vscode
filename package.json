@@ -1,0 +1,21 @@
+{
+  "name": "coral-reef",
+  "displayName": "Coral Reef",
+  "description": "Colorful theme loosely based on the Rainglow Vision Theme.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Coral Reef (italic)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Coral Reef (italic)-color-theme.json"
+      }
+    ]
+  }
+}
