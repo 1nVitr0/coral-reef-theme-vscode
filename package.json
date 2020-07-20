@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/INVITR0/coral-reef-theme-vscode"
   },
-  "version": "1.1.0",
+  "version": "1.2.0",
   "engines": {
     "vscode": "^1.47.0"
   },
