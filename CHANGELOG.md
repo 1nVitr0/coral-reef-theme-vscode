@@ -4,6 +4,11 @@ All notable changes to the "coral-reef" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v 1.3.0 (2020-07-21)
+
+- fix selection background not visible
+- revert badge color back to orange
+
 ## v 1.2.0 (2020-07-20)
 
 - dim colors to be more easy in the eyes
