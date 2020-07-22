@@ -4,6 +4,11 @@ All notable changes to the "coral-reef" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v1.3.1 (2020-07-22)
+
+- lighten keyword color for better visibility in selections
+- make find background more visible and better readable in comments
+
 ## v 1.3.0 (2020-07-21)
 
 - fix selection background not visible

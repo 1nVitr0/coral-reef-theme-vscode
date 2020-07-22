@@ -9,10 +9,11 @@
     "button.foreground": "#EBEBEB",
     "editor.background": "#040404",
     "editor.foreground": "#EBEBEB",
-    "editor.hoverHighlightBackground": "#6dfae540",
-    "editor.lineHighlightBackground": "#FFFFFF11",
-    "editor.selectionBackground": "#6dfae540",
-    "editor.wordHighlightBackground": "#6dfae540",
+    "editor.lineHighlightBackground": "#FFFFFF16",
+    "editor.hoverHighlightBackground": "#6dfae535",
+    "editor.selectionBackground": "#6dfae535",
+    "editor.wordHighlightBackground": "#6dfae535",
+    "editor.findMatchBackground": "#fcaf2152",
     "editor.wordHighlightStrongBackground": "#fcaf2122",
     "editorBracketMatch.background": "#fa5e2a44",
     "editorBracketMatch.border": "#fcaf21",
@@ -101,7 +102,7 @@
     {
       "scope": "keyword",
       "settings": {
-        "foreground": "#4c4af1"
+        "foreground": "#6260f8"
       }
     },
     {
@@ -276,7 +277,7 @@
     {
       "scope": "punctuation.definition.heading.markdown",
       "settings": {
-        "foreground": "#4c4af1"
+        "foreground": "#6260f8"
       }
     },
     {
@@ -288,19 +289,19 @@
     {
       "scope": ["punctuation.definition.bold.markdown", "punctuation.definition.italic.markdown"],
       "settings": {
-        "foreground": "#4c4af1"
+        "foreground": "#6260f8"
       }
     },
     {
       "scope": ["punctuation.definition.string.begin.markdown", "punctuation.definition.string.end.markdown"],
       "settings": {
-        "foreground": "#4c4af1"
+        "foreground": "#6260f8"
       }
     },
     {
       "scope": "punctuation.definition.metadata.markdown",
       "settings": {
-        "foreground": "#4c4af1"
+        "foreground": "#6260f8"
       }
     },
     {
@@ -361,7 +362,7 @@
     {
       "scope": "variable.language.this",
       "settings": {
-        "foreground": "#fcaf21",
+        "foreground": "#6260f8",
         "fontStyle": "bold"
       }
     },
@@ -407,7 +408,7 @@
     {
       "scope": "storage.type",
       "settings": {
-        "foreground": "#4c4af1"
+        "foreground": "#6260f8"
       }
     },
     {
@@ -437,7 +438,7 @@
         "keyword.operator.logical.python"
       ],
       "settings": {
-        "foreground": "#4c4af1"
+        "foreground": "#6260f8"
       }
     },
     {
@@ -565,10 +566,22 @@
       "settings": {
         "fontStyle": "italic bold"
       }
+    },
+    {
+      "scope": "source.sql.embedded",
+      "settings": {
+        "foreground": "#D9D9D9"
+      }
+    },
+    {
+      "scope": "keyword.other.DML",
+      "settings": {
+        "foreground": "#fa5e2a"
+      }
     }
   ],
   "semanticTokenColors": {
-    "newOperator": "#4c4af1",
+    "newOperator": "#6260f8",
     "stringLiteral": "#80d846",
     "customLiteral": "#19DB76",
     "numberLiteral": "#19DB76",
