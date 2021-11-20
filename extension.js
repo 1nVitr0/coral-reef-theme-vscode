@@ -6,10 +6,10 @@ vscode.window.showInformationMessage(
   'Switch to new version'
 ).then(selection => {
   if (selection === 'Open Marketplace') {
-    vscode.commands.executeCommand('workbench.extensions.search', vscode.Uri.parse('1nVitr0.theme-coral-reef'));
+    vscode.commands.executeCommand('workbench.extensions.search', '1nVitr0.theme-coral-reef');
   } else if (selection === 'Switch to new version') {
-    vscode.commands.executeCommand('workbench.extensions.installExtension', vscode.Uri.parse('1nVitr0.theme-coral-reef')).then(() => {
-      vscode.commands.executeCommand('workbench.extensions.uninstallExtension', vscode.Uri.parse('invitro.coral-reef'));
+    vscode.commands.executeCommand('workbench.extensions.installExtension', '1nVitr0.theme-coral-reef').then(() => {
+      vscode.commands.executeCommand('workbench.extensions.uninstallExtension', 'invitro.coral-reef');
     });
   }
 });
