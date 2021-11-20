@@ -1,13 +1,54 @@
-# README
+# Coral Reef Theme
 
-Colorful theme loosely based on the Rainglow Vision Theme.
-Includes support for some semantic highlighting.
+<span style="background: #040404">
+<b style="color: #EBEBEB">C</b><b style="color: #06e5c7">o</b><b style="color: #1EE85B">l</b><b style="color: #ed9a26">o</b><b style="color: #edea50">r</b><b style="color: #1392E8">f</b><b style="color: #ef3939">u</b><b style="color: #b87aff">l</b>
+</span>
+theme loosely based on the [Rainglow Vision](https://github.com/rainglow/vscode) Theme.
 
-![Syntax example](syntax.png)
+![Syntax example](resources/syntax-ts.png)
 
-#### NOTE:
+## Included Themes
 
-If you don't like italic and bold highlighting, this is not a theme for you.
-It relies heavily on bold text for global constants, imports and primitive types.
-Italics are used to differentiate Interfaces from classes, comments, control flow, modifiers and operators, decorators.
-Italics are also used to mark support function, for example to better see Promise .then() / .catch().
+- `Coral Reef`: Base theme with both **bold** and *italic* markup
+- `Coral Reef Flat`: Base theme without font style markup
+- `Coral Reef Muted`: Less saturated variant with both **bold** and *italic* markup
+- `Coral Reef Muted Flat`: Less saturated variant without font style markup
+
+## Language Support
+
+Supports all major languages including additional semantic highlighting. Include extended support for regular expression highlighting. Developed with focus on:
+
+- `JavaScript`
+- `TypeScript`
+- `HTML`
+- `CSS` / `SCSS` / `SASS`
+- `PHP`
+- `JSON` / `YAML`
+- `Markdown`
+
+## Syntax Highlighting Examples
+
+> `JSON`:
+> ![Syntax example](resources/syntax-json.png)
+
+> `YAML`:
+> ![Syntax example](resources/syntax-yaml.png)
+
+> `HTML`:
+> ![Syntax example](resources/syntax-html.png)
+
+> `CSS`:
+> ![Syntax example](resources/syntax-scss.png)
+
+## Contributions
+
+- Originally based on the `Vision` theme from the [Rainglow Theme Pack](https://github.com/rainglow/vscode) by [Dayle Rees](https://github.com/daylerees)
+- The build process and theme file are majorly based on the [Draculy Theme](https://github.com/dracula/visual-studio-code) by [Derek S.](https://github.com/dsifford)
+
+## Maintainer
+
+This theme is maintained by the following person:
+
+[![Aram Becker](https://avatars.githubusercontent.com/u/15647636?v=4&s=72)](https://github.com/1nVitr0) |
+:---: |
+[Aram Becker](https://github.com/1nVitr0) |
