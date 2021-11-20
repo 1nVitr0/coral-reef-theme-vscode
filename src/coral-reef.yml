@@ -210,7 +210,7 @@ colors:
   editor.lineHighlightBorder: # Background color for the border around the line at the cursor position
 
   editorLink.activeForeground: *CYAN # Color of active links
-  editor.rangeHighlightBackground: !alpha [*PURPLE, 15] # Background color of highlighted ranges, like by Quick Open and Find features
+  editor.rangeHighlightBackground: *SELECTION # Background color of highlighted ranges, like by Quick Open and Find features
 
   editor.snippetTabstopHighlightBackground: *BG # Highlight background color of a snippet tabstop
   editor.snippetTabstopHighlightBorder: *PRIMARY # Highlight border color of a snippet tabstop
@@ -689,6 +689,14 @@ tokenColors:
     settings:
       foreground: *ORANGE
 
+  - name: HTML tags
+    scope:
+      - entity.name.tag.css
+      - entity.name.tag.scss
+      - entity.name.tag.sass
+    settings:
+      fontStyle: bold
+
   - name: CSS attribute parent selectors / references ('&')
     scope:
       - entity.other.attribute-name.parent-selector
@@ -1130,12 +1138,19 @@ tokenColors:
     scope:
       - variable
       - constant.other.key.perl # Perl edge case
-      - support.variable.property # Object properties
       - variable.other.constant.js # Fix incorrect highlighting of pseudo-constants in js, jsx
       - variable.other.constant.ts # Fixes incorrect highlighting of pseudo-constants in ts
       - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
     settings:
       foreground: *FG
+
+  - name: Object properties
+    scope:
+      - support.variable.property # Object properties
+      - variable.property
+      - variable.other.property
+    settings:
+      foreground: *YELLOWISH
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:

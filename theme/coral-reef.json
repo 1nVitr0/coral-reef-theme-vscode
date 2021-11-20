@@ -149,7 +149,7 @@
         "editor.hoverHighlightBackground": "#06e9cb35",
         "editor.lineHighlightBackground": "#383838",
         "editorLink.activeForeground": "#06e5c7",
-        "editor.rangeHighlightBackground": "#b87aff15",
+        "editor.rangeHighlightBackground": "#06e9cb35",
         "editor.snippetTabstopHighlightBackground": "#090909",
         "editor.snippetTabstopHighlightBorder": "#d04306",
         "editor.snippetFinalTabstopHighlightBackground": "#090909",
@@ -648,6 +648,17 @@
             ],
             "settings": {
                 "foreground": "#f97339"
+            }
+        },
+        {
+            "name": "HTML tags",
+            "scope": [
+                "entity.name.tag.css",
+                "entity.name.tag.scss",
+                "entity.name.tag.sass"
+            ],
+            "settings": {
+                "fontStyle": "bold"
             }
         },
         {
@@ -1188,13 +1199,23 @@
             "scope": [
                 "variable",
                 "constant.other.key.perl",
-                "support.variable.property",
                 "variable.other.constant.js",
                 "variable.other.constant.ts",
                 "variable.other.constant.tsx"
             ],
             "settings": {
                 "foreground": "#EBEBEB"
+            }
+        },
+        {
+            "name": "Object properties",
+            "scope": [
+                "support.variable.property",
+                "variable.property",
+                "variable.other.property"
+            ],
+            "settings": {
+                "foreground": "#ed9a26"
             }
         },
         {
