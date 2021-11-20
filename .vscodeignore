@@ -1,6 +1,8 @@
 node_modules/**
 .vscode/**
-.vscode-test/**
+.github/**
 .gitignore
+tsconfig.json
+package-lock.json
 src/**
-helpers/**
+resources/syntax-samples/**

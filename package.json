@@ -43,9 +43,13 @@
     "lint": "ts-node src/scripts/lint.ts"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "^16.11.9",
     "@types/tinycolor2": "^1.4.3",
     "js-yaml": "^4.1.0",
+    "semantic-release": "^18.0.0",
+    "semantic-release-vsce": "^3.5.0",
     "tinycolor2": "^1.4.2",
     "ts-node-dev": "^1.1.8",
     "type-fest": "^2.5.4"
