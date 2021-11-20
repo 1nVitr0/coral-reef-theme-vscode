@@ -6,7 +6,11 @@
   "repository": {
     "url": "https://github.com/INVITR0/coral-reef-theme-vscode"
   },
-  "version": "1.2.0",
+  "version": "1.2.1",
+  "main": "./extension.js",
+  "activationEvents": [
+    "*"
+  ],
   "engines": {
     "vscode": "^1.47.0"
   },
