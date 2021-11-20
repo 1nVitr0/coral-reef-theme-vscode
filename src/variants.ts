@@ -1,37 +1,21 @@
 import { FontStyle } from './model/style';
 import { ThemeVariant, Color } from './model/theme';
-import fs from 'fs';
 
-const variants: { name: string; variations: ThemeVariant }[] = [
-  {
-    name: '',
-    variations: {},
+const muteColors = (color: Color) => color.desaturate(24);
+const stripFontStyles = (fontStyle: FontStyle | null) => null;
+
+const variants: Record<string, ThemeVariant> = {
+  '': {},
+  flat: {
+    fontStyles: stripFontStyles,
   },
-  {
-    name: 'flat',
-    variations: {
-      fontStyles: (fontStyle: FontStyle | null) => null,
-    },
+  muted: {
+    colors: { colors: muteColors, ansi: muteColors },
   },
-  {
-    name: 'muted',
-    variations: {
-      colors: {
-        colors: (color: Color) => color.desaturate(24),
-        ansi: (color: Color) => color.desaturate(24),
-      },
-    },
+  'muted-flat': {
+    colors: { colors: muteColors, ansi: muteColors },
+    fontStyles: stripFontStyles,
   },
-  {
-    name: 'muted-flat',
-    variations: {
-      colors: {
-        colors: (color: Color) => color.desaturate(24),
-        ansi: (color: Color) => color.desaturate(24),
-      },
-      fontStyles: (fontStyle: FontStyle | null) => null,
-    },
-  },
-];
+};
 
 export default variants;

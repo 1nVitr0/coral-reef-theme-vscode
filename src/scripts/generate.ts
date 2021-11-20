@@ -2,7 +2,7 @@ import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { Type, DEFAULT_SCHEMA, load } from 'js-yaml';
 import { Theme, ThemeVariant, ThemeTransform } from '../model/theme';
-import variantDescriptors from '../variants';
+import variantMap from '../variants';
 import tinycolor from 'tinycolor2';
 import { FontStyle } from '../model/style';
 
@@ -69,7 +69,7 @@ const withAlphaType = new Type('!alpha', {
 });
 
 const schema = DEFAULT_SCHEMA.extend([withAlphaType]);
-const variants = variantDescriptors.map(({ name, variations }) => ({
+const variants = Object.entries(variantMap).map(([name, variations]) => ({
   name,
   transform: transformVariant(variations),
 }));
@@ -90,13 +90,4 @@ export default async function generate() {
     name,
     theme: transform(base),
   }));
-}
-
-class Test {
-  constructor(public name: string, public theme: Theme) {}
-
-  async generate() {
-    const { name, theme } = this;
-    const { tokenColors, colors } = theme;
-  }
 }
