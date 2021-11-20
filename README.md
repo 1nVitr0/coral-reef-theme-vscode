@@ -1,5 +1,7 @@
 # README
 
+**This extension is now deprecated due to a publisher change. Refer to the [new version of the extension](https://marketplace.visualstudio.com/items?itemName=1nVitr0.theme-coral-reef).**
+
 Colorful theme loosely based on the Rainglow Vision Theme.
 Includes support for some semantic highlighting.
 
