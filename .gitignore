@@ -1,2 +1,7 @@
-.vscode/
+node_modules/
+.vscode/**
+resources/.vscode/
 *.vsix
+
+!.vscode/launch.json
+!.vscode/tasks.json

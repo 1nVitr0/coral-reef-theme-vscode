@@ -1,14 +1,14 @@
 {
-  "name": "coral-reef",
+  "name": "theme-coral-reef",
   "displayName": "Coral Reef",
   "description": "Colorful theme loosely based on the Rainglow Vision Theme.",
-  "publisher": "invitro",
+  "publisher": "1nVitr0",
   "repository": {
     "url": "https://github.com/INVITR0/coral-reef-theme-vscode"
   },
   "version": "1.3.1",
   "engines": {
-    "vscode": "^1.47.0"
+    "vscode": "^1.13.0"
   },
   "categories": [
     "Themes"
@@ -16,10 +16,42 @@
   "contributes": {
     "themes": [
       {
-        "label": "Coral Reef (italic)",
+        "label": "Coral Reef",
         "uiTheme": "vs-dark",
-        "path": "./themes/Coral Reef (italic)-color-theme.json"
+        "path": "./theme/coral-reef.json"
+      },
+      {
+        "label": "Coral Reef Muted",
+        "uiTheme": "vs-dark",
+        "path": "./theme/coral-reef-muted.json"
+      },
+      {
+        "label": "Coral Reef Flat (no font styles)",
+        "uiTheme": "vs-dark",
+        "path": "./theme/coral-reef-flat.json"
+      },
+      {
+        "label": "Coral Reef Muted Flat (no font styles)",
+        "uiTheme": "vs-dark",
+        "path": "./theme/coral-reef-muted-flat.json"
       }
     ]
+  },
+  "scripts": {
+    "build": "ts-node-dev src/scripts/build.ts",
+    "build:watch": "ts-node-dev --respawn --watch src/coral-reef.yml src/scripts/build.ts",
+    "lint": "ts-node src/scripts/lint.ts"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^16.11.9",
+    "@types/tinycolor2": "^1.4.3",
+    "js-yaml": "^4.1.0",
+    "semantic-release": "^18.0.0",
+    "semantic-release-vsce": "^3.5.0",
+    "tinycolor2": "^1.4.2",
+    "ts-node-dev": "^1.1.8",
+    "type-fest": "^2.5.4"
   }
 }

@@ -1,0 +1,14 @@
+$schema: vscode://schemas/color-theme
+name: Coral Reef
+semanticHighlighting: true
+coralReef:
+  colors:
+    - &CYAN '#06e5c7'
+    - &ORANGE '#f97339'
+    - &YELLOW '#edea50'
+    - &RED '#ef3939'
+
+# User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
+colors:
+  editor.foreground: *FG # Background color of a symbol during read-access, for example when reading a variable
+  editor.wordHighlightStrongBackground: !alpha [*YELLOW, 60]

@@ -1,0 +1,24 @@
+// Sourced from https://gist.github.com/nickcooley/1432176
+
+@mixin buttons($basicBorder: 1px, $gradient1: #fff, $gradient2: #d8dee7) {
+  button#submit {
+    border: $basicBorder solid #acbed3;
+    @include border-radius($border-radius, $border-radius);
+    @include background-image(linear-gradient($gradient1, $gradient2));
+    padding: 3px 14px;
+    color: #3b557d;
+    cursor: pointer;
+
+    &.primary[title='Submit'] {
+      border: 2px solid #3b557d;
+      padding: 5px 15px;
+      @include border-radius($border-radius + 2, $border-radius + 2);
+    }
+    &.disabled {
+      opacity: 0.8;
+    }
+    &:hover {
+      @include background-image(linear-gradient($gradient2, $gradient1));
+    }
+  }
+}

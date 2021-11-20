@@ -1,4 +1,8 @@
+node_modules/**
 .vscode/**
-.vscode-test/**
+.github/**
 .gitignore
-vsc-extension-quickstart.md
+tsconfig.json
+package-lock.json
+src/**
+resources/syntax-samples/**
