@@ -26,29 +26,29 @@ coralReef:
   colors:
     - &COMMENT '#048b79'
     - &CYAN '#06e5c7'
-    - &GREEN '#1EE85B'
+    - &GREEN '#38e71d'
     - &ORANGE '#f97339'
     - &YELLOWISH '#ed9a26'
-    - &YELLOW '#edea50'
+    - &YELLOW '#e8cd21'
     - &BLUE '#1392E8'
     - &RED '#ef3939'
     - &PURPLE '#b87aff'
   theme:
     - &PRIMARY '#d04306'
   ansi:
-    - &COLOR0 '#21222C'
+    - &COLOR0 '#0f0f0f'
     - &COLOR1 '#ef3939'
-    - &COLOR2 '#1EE85B'
-    - &COLOR3 '#edea50'
-    - &COLOR4 '#b87aff'
+    - &COLOR2 '#38e71d'
+    - &COLOR3 '#e8cd21'
+    - &COLOR4 '#1392E8'
     - &COLOR5 '#f97339'
     - &COLOR6 '#06e5c7'
     - &COLOR7 '#EBEBEB'
     - &COLOR8 '#424242'
     - &COLOR9 '#f58080'
-    - &COLOR10 '#62ef8c'
-    - &COLOR11 '#f6f5ac'
-    - &COLOR12 '#d9b8ff'
+    - &COLOR10 '#7df2a0'
+    - &COLOR11 '#f1e179'
+    - &COLOR12 '#76c2f4'
     - &COLOR13 '#fba783'
     - &COLOR14 '#88fcec'
     - &COLOR15 '#FFFFFF'
@@ -60,8 +60,9 @@ coralReef:
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
   # Integrated Terminal Colors
-  terminal.background: *BG
+  terminal.background: *COLOR0
   terminal.foreground: *FG
+  terminal.selectionBackground: *SELECTION
   terminal.ansiBrightBlack: *COLOR8
   terminal.ansiBrightRed: *COLOR9
   terminal.ansiBrightGreen: *COLOR10
@@ -108,7 +109,7 @@ colors:
   input.background: *BG # Input box background
   input.foreground: *FG # Input box foreground
   input.border: *FGDimmer # Input box border
-  input.placeholderForeground: *FGDim # Input box foreground color for placeholder text
+  input.placeholderForeground: *FGDimmer # Input box foreground color for placeholder text
   inputOption.activeBorder: *PRIMARY # Border color of activated options in input fields
   inputValidation.infoForeground: # Input validation foreground color for information severity
   inputValidation.infoBackground: # Input validation background color for information severity
@@ -373,8 +374,11 @@ colors:
   # Quick Picker
   pickerGroup.border: *PRIMARY # Quick picker (Quick Open) color for grouping borders
   pickerGroup.foreground: *PRIMARY # Quick picker (Quick Open) color for grouping labels
-  quickInputTitle.background: *BGLighter
-  quickInput.background: *BGLighter
+  quickInputTitle.background: *BGLight
+  quickInput.background: *BGLight
+  quickInputList.focusBackground: *SELECTION
+  quickInputList.focusForeground: *FG
+  quickInputList.focusIconForeground: *FGDim
 
   # Debug
   debugToolBar.background: *BGLighter # Debug toolbar background color
@@ -695,6 +699,7 @@ tokenColors:
       - entity.name.tag.scss
       - entity.name.tag.sass
     settings:
+      foreground: *YELLOWISH
       fontStyle: bold
 
   - name: CSS attribute parent selectors / references ('&')
@@ -707,6 +712,7 @@ tokenColors:
   - name: HTML/CSS attribute names
     scope:
       - entity.other.attribute-name
+      - entity.other.attribute-name.id
     settings:
       foreground: *YELLOW
 
@@ -714,7 +720,6 @@ tokenColors:
     scope:
       - entity.other.attribute-name.id
     settings:
-      foreground: *YELLOWISH
       fontStyle: bold
 
   - name: HTML attribute selectors
@@ -899,6 +904,18 @@ tokenColors:
     settings:
       foreground: *FG
 
+  - name: HTML tag begin / end
+    scope:
+      - punctuation.definition.tag
+    settings:
+      foreground: !alpha [*ORANGE, 94]
+
+  - name: Type Parameter begin / end
+    scope:
+      - punctuation.definition.typeparameters
+    settings:
+      foreground: !alpha [*YELLOW, 94]
+
   - name: Variable interpolation operators
     scope:
       - meta.string-contents.quoted.double punctuation.definition.variable
@@ -929,6 +946,23 @@ tokenColors:
     settings:
       foreground: *ORANGE
       fontStyle: ''
+
+  - name: Key qoutes
+    scope:
+      - punctuation.support.type.property-name.begin.json
+      - punctuation.support.type.property-name.end.json
+      - punctuation.support.type.property-name.begin.yaml
+      - punctuation.support.type.property-name.end.yaml
+      - punctuation.support.type.property-name.begin.toml
+      - punctuation.support.type.property-name.end.toml
+      - punctuation.entity.name.function.target.begin.makefile
+      - punctuation.entity.name.function.target.end.makefile
+      - punctuation.entity.name.section.begin.toml
+      - punctuation.entity.name.section.end.toml
+      - punctuation.entity.name.tag.begin.yaml
+      - punctuation.entity.name.tag.end.yaml
+    settings:
+      foreground: !alpha [*ORANGE, 94]
 
   - name: Dates / timestamps (serializable languages)
     scope:
@@ -969,7 +1003,8 @@ tokenColors:
 
   - name: Types
     scope:
-      - entity.name.type
+      - entity.name.type.interface
+      - entity.name.type.class
       - keyword.type.cs
       - meta.protocol-list.objc
       - meta.return-type.objc
@@ -1167,7 +1202,7 @@ tokenColors:
       - meta.export variable.other.readwrite.alias # Module import aliasing (alias name)
       - meta.variable.assignment.destructured.object.coffee variable variable # Object destructuring variable (coffeescript)
     settings:
-      fontStyle: normal
+      fontStyle: bold
       foreground: *FG
 
   # =============================================================================
@@ -1263,6 +1298,8 @@ semanticTokenColors:
     foreground: *PURPLE
 
   # Make all global variables bold
+  namespace:
+    bold: true
   variable:
     bold: true
   variable.local:
@@ -1275,6 +1312,6 @@ semanticTokenColors:
     bold: false
     italic: true
 
-  # ORANGE enums
+  # PURPLE enums
   enum:
-    foreground: *ORANGE
+    foreground: *PURPLE
