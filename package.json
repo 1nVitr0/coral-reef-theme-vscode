@@ -7,7 +7,7 @@
   "repository": {
     "url": "https://github.com/INVITR0/coral-reef-theme-vscode"
   },
-  "version": "1.4.3",
+  "version": "1.5.0",
   "engines": {
     "vscode": "^1.13.0"
   },
@@ -22,6 +22,11 @@
         "path": "./theme/coral-reef.json"
       },
       {
+        "label": "Coral Reef Bright",
+        "uiTheme": "vs-dark",
+        "path": "./theme/coral-reef-bright.json"
+      },
+      {
         "label": "Coral Reef Muted",
         "uiTheme": "vs-dark",
         "path": "./theme/coral-reef-muted.json"
@@ -29,7 +34,12 @@
       {
         "label": "Coral Reef Flat (no font styles)",
         "uiTheme": "vs-dark",
-        "path": "./theme/coral-reef-flat.json"
+        "path": "./theme/coral-reef-bright-flat.json"
+      },
+      {
+        "label": "Coral Reef Bright Flat",
+        "uiTheme": "vs-dark",
+        "path": "./theme/coral-reef-bright.json"
       },
       {
         "label": "Coral Reef Muted Flat (no font styles)",
