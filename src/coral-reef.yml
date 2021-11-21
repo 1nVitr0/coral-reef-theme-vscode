@@ -95,10 +95,10 @@ colors:
   button.background: *PRIMARY # Button background color
   button.foreground: *FG # Button foreground color
   button.border: # Button border color
-  button.hoverBackground: # Button background color when hovering
-  button.secondaryBackground: *BG # secondary button background color.
+  button.hoverBackground: !alpha [*PRIMARY, A0] # Button background color when hovering
+  button.secondaryBackground: *BGLight # secondary button background color.
   button.secondaryForeground: *FG # secondary button foreground color.
-  button.secondaryHoverBackground: *BGLight # secondary button background color when hovering.
+  button.secondaryHoverBackground: *BGLighter # secondary button background color when hovering.
 
   # Dropdown Control
   dropdown.background: *BGLighter # Dropdown background
@@ -150,7 +150,7 @@ colors:
 
   # Activity Bar
   activityBar.background: *BGLighter # Activity Bar background color
-  activityBar.inactiveForeground: !alpha [*FG, 72] # Activity bar item foreground color when it is inactive
+  activityBar.inactiveForeground: *FGDim # Activity bar item foreground color when it is inactive
   activityBar.dropBackground: # Drag and drop feedback color for the Activity Bar items
   activityBar.foreground: *FG # Activity bar foreground color (for example used for the icons)
   activityBar.border: # Activity Bar border color with the Side Bar
@@ -191,7 +191,7 @@ colors:
   editor.wordHighlightStrongBackground: !alpha [*YELLOW, 60]
   editor.background: *BG
   editorLineNumber.foreground: *FGDimmer
-  editorLineNumber.activeForeground: !alpha [*CYAN, D0]
+  editorLineNumber.activeForeground: !alpha [*CYAN, D9]
   editorCursor.foreground: *FG
 
   editor.selectionBackground: *SELECTION # Color of the editor selection
@@ -199,7 +199,7 @@ colors:
   editor.inactiveSelectionBackground: *BGActive # Color of the selection in an inactive editor
   editor.foldBackground: *BGDarker # Background color for folded ranges
 
-  editor.wordHighlightBackground: *SELECTION # Background color of a symbol during write-access, for example when writing to a variable
+  editor.wordHighlightBackground: !alpha [*BLUE, 40] # Background color of a symbol during write-access, for example when writing to a variable
 
   editor.findMatchBackground: !alpha [*YELLOW, 60]
   editor.findMatchHighlightBackground: !alpha [*YELLOW, 40] # Color of the other search matches
@@ -253,6 +253,7 @@ colors:
   editorOverviewRuler.infoForeground: !alpha [*BLUE, 80]
 
   minimap.background: *BGLight
+  minimap.selectionHighlight: !alpha [*CYAN, A2]
 
   editorError.foreground: *RED # Foreground color of error squigglies in the editor
   editorError.border: # Border color of error squigglies in the editor
@@ -289,9 +290,9 @@ colors:
   editorSuggestWidget.selectedBackground: !alpha [*CYAN, 60] # Background color of the selected entry in the suggestion widget
   editorSuggestWidget.selectedForeground: *FG # Background color of the selected entry in the suggestion widget
 
-  editorHoverWidget.background: *BG # Background color of the editor hover
+  editorHoverWidget.background: *BGLight # Background color of the editor hover
   editorHoverWidget.border: *PRIMARY # Border color of the editor hover
-  editorHoverWidget.foreground: *WHITE
+  editorHoverWidget.foreground: *FG
   editorWidget.foreground: *FG
 
   debugExceptionWidget.background: # Exception widget background color
@@ -347,6 +348,13 @@ colors:
   statusBarItem.remoteBackground: *BGLight # Foreground color for the remote indicator on the status bar
   statusBar.border: *BG
 
+  # Text colors (e.g. in hover widget)
+  textCodeBlock.background: *SELECTION
+  textBlockQuote.background: *BGLighter
+  textLink.foreground: *ORANGE
+  textLink.activeForeground: *YELLOWISH
+  textPreformat.foreground: *FGDim
+
   # Title Bar Colors (MacOS Only)
   titleBar.activeBackground: *BGDark # Title Bar background when the window is active
   titleBar.activeForeground: *FG # Title Bar foreground when the window is active
@@ -384,8 +392,8 @@ colors:
   debugToolBar.background: *BGLighter # Debug toolbar background color
 
   # Welcome Page
-  welcomePage.buttonBackground: # Background color for the buttons on the Welcome page
-  welcomePage.buttonHoverBackground: # Hover background color for the buttons on the Welcome page
+  welcomePage.buttonBackground: *BGLight # Background color for the buttons on the Welcome page
+  welcomePage.buttonHoverBackground: *BGLighter # Hover background color for the buttons on the Welcome page
   walkThrough.embeddedEditorBackground: *BGLight # Background color for the embedded editors on the Interactive Playground
 
   # Setting Editor
@@ -592,7 +600,7 @@ tokenColors:
   - name: User-defined class names
     scope:
       - entity.name.type.class
-      - entity.name.class
+      - entity.name.type.parameter
     settings:
       foreground: *YELLOW
 
@@ -614,6 +622,14 @@ tokenColors:
     settings:
       fontStyle: italic
       foreground: *YELLOW
+
+  - name: Support classes / types
+    scope:
+      - support.class
+      - support.type
+    settings:
+      foreground: *YELLOW
+      fontStyle: bold
 
   # =============================================================================
   # Comments
@@ -1171,7 +1187,6 @@ tokenColors:
 
   - name: Variables and object properties
     scope:
-      - variable
       - constant.other.key.perl # Perl edge case
       - variable.other.constant.js # Fix incorrect highlighting of pseudo-constants in js, jsx
       - variable.other.constant.ts # Fixes incorrect highlighting of pseudo-constants in ts

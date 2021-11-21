@@ -1,9 +1,9 @@
 # Coral Reef Theme
 
-<span style="background: #040404">
+<span style="background-color: #040404">
 <b style="color: #EBEBEB">C</b><b style="color: #06e5c7">o</b><b style="color: #1EE85B">l</b><b style="color: #ed9a26">o</b><b style="color: #edea50">r</b><b style="color: #1392E8">f</b><b style="color: #ef3939">u</b><b style="color: #b87aff">l</b>
 </span>
-theme loosely based on the [Rainglow Vision](https://github.com/rainglow/vscode) Theme.
+theme loosely based on the <a href="https://github.com/rainglow/vscode">Rainglow Vision</a> Theme.
 
 ![Syntax example](resources/syntax-ts.png)
 

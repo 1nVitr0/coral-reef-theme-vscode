@@ -88,9 +88,10 @@
         "errorForeground": "#d55353",
         "button.background": "#d04306",
         "button.foreground": "#ebebeb",
-        "button.secondaryBackground": "#090909",
+        "button.hoverBackground": "#d04306A0",
+        "button.secondaryBackground": "#1B1B1B",
         "button.secondaryForeground": "#ebebeb",
-        "button.secondaryHoverBackground": "#1B1B1B",
+        "button.secondaryHoverBackground": "#383838",
         "dropdown.background": "#383838",
         "dropdown.border": "#646464",
         "dropdown.foreground": "#ebebeb",
@@ -116,7 +117,7 @@
         "list.warningForeground": "#cbb83e",
         "list.errorForeground": "#d55353",
         "activityBar.background": "#383838",
-        "activityBar.inactiveForeground": "#EBEBEB72",
+        "activityBar.inactiveForeground": "#868686",
         "activityBar.foreground": "#ebebeb",
         "activityBar.activeBorder": "#d04306",
         "activityBar.activeBackground": "#1B1B1B",
@@ -137,13 +138,13 @@
         "editor.wordHighlightStrongBackground": "#e8cd2160",
         "editor.background": "#090909",
         "editorLineNumber.foreground": "#646464",
-        "editorLineNumber.activeForeground": "#06e5c7D0",
+        "editorLineNumber.activeForeground": "#06e5c7D9",
         "editorCursor.foreground": "#ebebeb",
         "editor.selectionBackground": "#06e9cb35",
         "editor.selectionHighlightBackground": "#e8cd2140",
         "editor.inactiveSelectionBackground": "#464646",
         "editor.foldBackground": "#000000",
-        "editor.wordHighlightBackground": "#06e9cb35",
+        "editor.wordHighlightBackground": "#1392E840",
         "editor.findMatchBackground": "#e8cd2160",
         "editor.findMatchHighlightBackground": "#e8cd2140",
         "editor.findRangeHighlightBackground": "#2A2A2A",
@@ -178,6 +179,7 @@
         "editorOverviewRuler.warningForeground": "#e8cd2180",
         "editorOverviewRuler.infoForeground": "#1392E880",
         "minimap.background": "#1B1B1B",
+        "minimap.selectionHighlight": "#06e5c7A2",
         "editorError.foreground": "#d55353",
         "editorWarning.foreground": "#cbb83e",
         "editorGutter.modifiedBackground": "#06e5c780",
@@ -196,9 +198,9 @@
         "editorSuggestWidget.foreground": "#ebebeb",
         "editorSuggestWidget.selectedBackground": "#06e5c760",
         "editorSuggestWidget.selectedForeground": "#ebebeb",
-        "editorHoverWidget.background": "#090909",
+        "editorHoverWidget.background": "#1B1B1B",
         "editorHoverWidget.border": "#d04306",
-        "editorHoverWidget.foreground": "#ffffff",
+        "editorHoverWidget.foreground": "#ebebeb",
         "editorWidget.foreground": "#ebebeb",
         "editorMarkerNavigation.background": "#1B1B1B",
         "peekView.border": "#d04306",
@@ -233,6 +235,11 @@
         "statusBarItem.remoteForeground": "#d19542",
         "statusBarItem.remoteBackground": "#1B1B1B",
         "statusBar.border": "#090909",
+        "textCodeBlock.background": "#06e9cb35",
+        "textBlockQuote.background": "#383838",
+        "textLink.foreground": "#e17d51",
+        "textLink.activeForeground": "#d19542",
+        "textPreformat.foreground": "#868686",
         "titleBar.activeBackground": "#040404",
         "titleBar.activeForeground": "#ebebeb",
         "titleBar.inactiveBackground": "#000000",
@@ -259,6 +266,8 @@
         "quickInputList.focusForeground": "#ebebeb",
         "quickInputList.focusIconForeground": "#868686",
         "debugToolBar.background": "#383838",
+        "welcomePage.buttonBackground": "#1B1B1B",
+        "welcomePage.buttonHoverBackground": "#383838",
         "walkThrough.embeddedEditorBackground": "#1B1B1B",
         "settings.headerForeground": "#ebebeb",
         "settings.modifiedItemForeground": "#22c9b2",
@@ -530,7 +539,7 @@
             "name": "User-defined class names",
             "scope": [
                 "entity.name.type.class",
-                "entity.name.class"
+                "entity.name.type.parameter"
             ],
             "settings": {
                 "foreground": "#cbb83e"
@@ -559,6 +568,17 @@
             "settings": {
                 "fontStyle": "italic",
                 "foreground": "#cbb83e"
+            }
+        },
+        {
+            "name": "Support classes / types",
+            "scope": [
+                "support.class",
+                "support.type"
+            ],
+            "settings": {
+                "foreground": "#cbb83e",
+                "fontStyle": "bold"
             }
         },
         {
@@ -1241,7 +1261,6 @@
         {
             "name": "Variables and object properties",
             "scope": [
-                "variable",
                 "constant.other.key.perl",
                 "variable.other.constant.js",
                 "variable.other.constant.ts",
