@@ -36,7 +36,7 @@ coralReef:
   theme:
     - &PRIMARY '#d04306'
   ansi:
-    - &COLOR0 '#090909'
+    - &COLOR0 '#0f0f0f'
     - &COLOR1 '#ef3939'
     - &COLOR2 '#38e71d'
     - &COLOR3 '#e8cd21'
@@ -60,8 +60,9 @@ coralReef:
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
   # Integrated Terminal Colors
-  terminal.background: *BG
+  terminal.background: *COLOR0
   terminal.foreground: *FG
+  terminal.selectionBackground: *SELECTION
   terminal.ansiBrightBlack: *COLOR8
   terminal.ansiBrightRed: *COLOR9
   terminal.ansiBrightGreen: *COLOR10
@@ -108,7 +109,7 @@ colors:
   input.background: *BG # Input box background
   input.foreground: *FG # Input box foreground
   input.border: *FGDimmer # Input box border
-  input.placeholderForeground: *FGDim # Input box foreground color for placeholder text
+  input.placeholderForeground: *FGDimmer # Input box foreground color for placeholder text
   inputOption.activeBorder: *PRIMARY # Border color of activated options in input fields
   inputValidation.infoForeground: # Input validation foreground color for information severity
   inputValidation.infoBackground: # Input validation background color for information severity
@@ -373,8 +374,11 @@ colors:
   # Quick Picker
   pickerGroup.border: *PRIMARY # Quick picker (Quick Open) color for grouping borders
   pickerGroup.foreground: *PRIMARY # Quick picker (Quick Open) color for grouping labels
-  quickInputTitle.background: *BGLighter
-  quickInput.background: *BGLighter
+  quickInputTitle.background: *BGLight
+  quickInput.background: *BGLight
+  quickInputList.focusBackground: *SELECTION
+  quickInputList.focusForeground: *FG
+  quickInputList.focusIconForeground: *FGDim
 
   # Debug
   debugToolBar.background: *BGLighter # Debug toolbar background color
@@ -1308,6 +1312,6 @@ semanticTokenColors:
     bold: false
     italic: true
 
-  # ORANGE enums
+  # PURPLE enums
   enum:
-    foreground: *ORANGE
+    foreground: *PURPLE

@@ -39,7 +39,7 @@
             "#d04306"
         ],
         "ansi": [
-            "#090909",
+            "#0f0f0f",
             "#ef3939",
             "#38e71d",
             "#e8cd21",
@@ -63,8 +63,9 @@
         ]
     },
     "colors": {
-        "terminal.background": "#090909",
+        "terminal.background": "#0f0f0f",
         "terminal.foreground": "#EBEBEB",
+        "terminal.selectionBackground": "#06e9cb35",
         "terminal.ansiBrightBlack": "#424242",
         "terminal.ansiBrightRed": "#f58080",
         "terminal.ansiBrightGreen": "#7df2a0",
@@ -73,7 +74,7 @@
         "terminal.ansiBrightMagenta": "#fba783",
         "terminal.ansiBrightCyan": "#88fcec",
         "terminal.ansiBrightWhite": "#FFFFFF",
-        "terminal.ansiBlack": "#090909",
+        "terminal.ansiBlack": "#0f0f0f",
         "terminal.ansiRed": "#ef3939",
         "terminal.ansiGreen": "#38e71d",
         "terminal.ansiYellow": "#e8cd21",
@@ -96,7 +97,7 @@
         "input.background": "#090909",
         "input.foreground": "#EBEBEB",
         "input.border": "#646464",
-        "input.placeholderForeground": "#868686",
+        "input.placeholderForeground": "#646464",
         "inputOption.activeBorder": "#d04306",
         "inputValidation.infoBorder": "#1392E8",
         "inputValidation.warningBorder": "#e8cd21",
@@ -252,8 +253,11 @@
         "extensionButton.prominentHoverBackground": "#d0430680",
         "pickerGroup.border": "#d04306",
         "pickerGroup.foreground": "#d04306",
-        "quickInputTitle.background": "#383838",
-        "quickInput.background": "#383838",
+        "quickInputTitle.background": "#1B1B1B",
+        "quickInput.background": "#1B1B1B",
+        "quickInputList.focusBackground": "#06e9cb35",
+        "quickInputList.focusForeground": "#EBEBEB",
+        "quickInputList.focusIconForeground": "#868686",
         "debugToolBar.background": "#383838",
         "walkThrough.embeddedEditorBackground": "#1B1B1B",
         "settings.headerForeground": "#EBEBEB",
@@ -1407,7 +1411,7 @@
             "italic": true
         },
         "enum": {
-            "foreground": "#f97339"
+            "foreground": "#b87aff"
         }
     }
 }
