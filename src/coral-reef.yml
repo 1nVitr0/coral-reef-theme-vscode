@@ -1185,6 +1185,12 @@ tokenColors:
   # Variables
   # =============================================================================
 
+  - name: Variables without special properties
+    scope:
+      - variable
+    settings:
+      foreground: *FG
+
   - name: Variables and object properties
     scope:
       - constant.other.key.perl # Perl edge case
@@ -1196,11 +1202,19 @@ tokenColors:
 
   - name: Object properties
     scope:
-      - support.variable.property # Object properties
+      - support.variable.property
+      - support.constant.property
       - variable.property
       - variable.other.property
     settings:
       foreground: *YELLOWISH
+
+  - name: Object Support Properties
+    scope:
+      - support.variable.property
+      - support.constant.property
+    settings:
+      fontStyle: italic
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:
@@ -1272,13 +1286,6 @@ tokenColors:
       - source.shell variable.other
     settings:
       fontStyle: italic bold
-      foreground: *FG
-
-  - name: Powershell constants mistakenly scoped to `support`, rather than `constant` (edge)
-    scope:
-      - support.constant
-    settings:
-      fontStyle: normal
       foreground: *FG
 
   - name: Makefile prerequisite names
