@@ -769,7 +769,7 @@
                 "variable.parameter"
             ],
             "settings": {
-                "fontStyle": "italic"
+                "fontStyle": "underline"
             }
         },
         {
@@ -1259,6 +1259,15 @@
             }
         },
         {
+            "name": "Variables without special properties",
+            "scope": [
+                "variable"
+            ],
+            "settings": {
+                "foreground": "#ebebeb"
+            }
+        },
+        {
             "name": "Variables and object properties",
             "scope": [
                 "constant.other.key.perl",
@@ -1274,11 +1283,22 @@
             "name": "Object properties",
             "scope": [
                 "support.variable.property",
+                "support.constant.property",
                 "variable.property",
                 "variable.other.property"
             ],
             "settings": {
                 "foreground": "#d19542"
+            }
+        },
+        {
+            "name": "Object Support Properties",
+            "scope": [
+                "support.variable.property",
+                "support.constant.property"
+            ],
+            "settings": {
+                "fontStyle": "italic"
             }
         },
         {
@@ -1361,16 +1381,6 @@
             ],
             "settings": {
                 "fontStyle": "italic bold",
-                "foreground": "#ebebeb"
-            }
-        },
-        {
-            "name": "Powershell constants mistakenly scoped to `support`, rather than `constant` (edge)",
-            "scope": [
-                "support.constant"
-            ],
-            "settings": {
-                "fontStyle": "normal",
                 "foreground": "#ebebeb"
             }
         },

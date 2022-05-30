@@ -1216,6 +1216,15 @@
             }
         },
         {
+            "name": "Variables without special properties",
+            "scope": [
+                "variable"
+            ],
+            "settings": {
+                "foreground": "#ebebeb"
+            }
+        },
+        {
             "name": "Variables and object properties",
             "scope": [
                 "constant.other.key.perl",
@@ -1231,12 +1240,21 @@
             "name": "Object properties",
             "scope": [
                 "support.variable.property",
+                "support.constant.property",
                 "variable.property",
                 "variable.other.property"
             ],
             "settings": {
                 "foreground": "#df9834"
             }
+        },
+        {
+            "name": "Object Support Properties",
+            "scope": [
+                "support.variable.property",
+                "support.constant.property"
+            ],
+            "settings": {}
         },
         {
             "name": "Destructuring / aliasing reference name (LHS)",
@@ -1313,15 +1331,6 @@
             "name": "Shell variables prefixed with \"$\" (edge case)",
             "scope": [
                 "source.shell variable.other"
-            ],
-            "settings": {
-                "foreground": "#ebebeb"
-            }
-        },
-        {
-            "name": "Powershell constants mistakenly scoped to `support`, rather than `constant` (edge)",
-            "scope": [
-                "support.constant"
             ],
             "settings": {
                 "foreground": "#ebebeb"
