@@ -10,5 +10,5 @@ coralReef:
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
-  editor.foreground: *FG # Background color of a symbol during read-access, for example when reading a variable
+  editor.foreground: *FG # Background color of a symbol during read-access, for example when reading a variable                
   editor.wordHighlightStrongBackground: !alpha [*YELLOW, 60]

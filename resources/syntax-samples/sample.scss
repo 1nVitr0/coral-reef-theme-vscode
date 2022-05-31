@@ -18,7 +18,7 @@
       opacity: 0.8;
     }
     &:hover {
-      @include background-image(linear-gradient($gradient2, $gradient1));
+      @include background-image(linear-gradient($gradient2, $gradient1));                                                      
     }
   }
 }
