@@ -978,12 +978,10 @@
                 "entity.name.function.target.makefile",
                 "entity.name.section.toml",
                 "entity.name.tag.yaml",
-                "variable.other.key.toml",
-                "support.type.property-name"
+                "variable.other.key.toml"
             ],
             "settings": {
-                "foreground": "#e17d51",
-                "fontStyle": ""
+                "foreground": "#e17d51"
             }
         },
         {
@@ -1284,11 +1282,24 @@
             "scope": [
                 "support.variable.property",
                 "support.constant.property",
+                "support.type.property-name",
+                "meta.object-literal.key",
+                "meta.definition.property",
                 "variable.property",
+                "variable.object.property",
                 "variable.other.property"
             ],
             "settings": {
                 "foreground": "#d19542"
+            }
+        },
+        {
+            "name": "Support Keys",
+            "scope": [
+                "support.type.property-name"
+            ],
+            "settings": {
+                "fontStyle": ""
             }
         },
         {
