@@ -225,6 +225,8 @@ colors:
 
   editorCodeLens.foreground: *FGDim # Foreground color of an editor CodeLens
 
+  editorStickyScroll.background: *BGLight # Background color of the editor sticky scroll header
+
   # NOTE: These are not set because they tend to be highly contested from
   # person to person. Thus, setting these is probably better suited
   # for workbench.colorCustomizations in User Settings

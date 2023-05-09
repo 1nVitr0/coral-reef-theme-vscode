@@ -161,6 +161,7 @@
         "editorIndentGuide.activeBackground": "#FFFFFF45",
         "editorRuler.foreground": "#FFFFFF1A",
         "editorCodeLens.foreground": "#868686",
+        "editorStickyScroll.background": "#1B1B1B",
         "editorBracketHighlight.foreground1": "#EBEBEB",
         "editorBracketHighlight.foreground2": "#ed9a26",
         "editorBracketHighlight.foreground3": "#06e5c7",
