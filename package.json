@@ -54,15 +54,15 @@
     "lint": "ts-node src/scripts/lint.ts"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^18.0.0",
+    "@types/node": "^20.1.2",
     "@types/tinycolor2": "^1.4.3",
     "js-yaml": "^4.1.0",
-    "semantic-release": "^19.0.3",
-    "semantic-release-vsce": "^5.0.17",
-    "tinycolor2": "^1.4.2",
+    "semantic-release": "^21.0.2",
+    "semantic-release-vsce": "^5.5.9",
+    "tinycolor2": "^1.6.0",
     "ts-node-dev": "^2.0.0",
-    "type-fest": "^2.13.1"
+    "type-fest": "^3.10.0"
   }
 }
