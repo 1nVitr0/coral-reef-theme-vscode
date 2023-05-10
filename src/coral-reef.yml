@@ -615,7 +615,6 @@ tokenColors:
       - variable.other.readwrite.instance.ruby # ruby's "@" instance symbol
       - variable.parameter.function.language.special # Special words as parameters
     settings:
-      foreground: *ORANGE
       fontStyle: bold
 
   - name: Inherited classes
